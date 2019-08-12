@@ -3,10 +3,13 @@
 
 (def db-connection-info
   (korma/mysql
-    {:classname "com.mysql.jdbc.Driver"
+    {
+     :classname "com.mysql.jdbc.Driver"
      :subprotocol "mysql"
      :user "root"
-     :subname "//localhost:3306/todo"}))
+     :password "root"
+     :subname "//localhost:13306/todo"
+     }))
 
 ; set up korma
 (korma/defdb db db-connection-info)
